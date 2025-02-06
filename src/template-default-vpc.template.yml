@@ -33,7 +33,7 @@ Parameters:
       Required Ethash hashrate in MH/s. AWS will start the most cost effective available
       instances to achieve this Hashrate.
     Type: Number
-    Default: 1000
+    Default: 16
     MinValue: 0
 
   CoinName:
@@ -49,7 +49,7 @@ Parameters:
   WalletAddress:
     Type: String
     Description: Wallet Address (use BTC address regardless of the Coin type)
-    Default: "bc1qjlm3kjy87zs6qywmwz2u0ytlde9z4whyzflg38"
+    Default: "bc1q246senn8rgashau0zcr07xk3e6r8h099an0p6e"
 
   PricingPlan:
     Type: String
