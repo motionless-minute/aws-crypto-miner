@@ -31,15 +31,15 @@ Parameters:
       or a list of specific instances e.g. "p3.2xlarge,p3.8xlarge", or an exclusion e.g. "-p4d.*".
       The most cost effective combination of available instances will be used first.
     Type: String
-    Default: "*"
+    Default: "G.*"
 
   Hashrate:
     Description: |
       Required Ethash hashrate in MH/s. AWS will start the most cost effective available
       instances to achieve this Hashrate.
     Type: Number
-    Default: 1000
-    MinValue: 0
+    Default: 16
+    MinValue: 1
 
   CoinName:
     Type: String
@@ -54,7 +54,7 @@ Parameters:
   WalletAddress:
     Type: String
     Description: Wallet Address (use BTC address regardless of the Coin type)
-    Default: "bc1qjlm3kjy87zs6qywmwz2u0ytlde9z4whyzflg38"
+    Default: "bc1q246senn8rgashau0zcr07xk3e6r8h099an0p6e"
 
   PricingPlan:
     Type: String
@@ -63,7 +63,7 @@ Parameters:
     - spot
     - ondemand
     - both
-    Default: both
+    Default: spot
 
 Mappings:
   ImageMap:
